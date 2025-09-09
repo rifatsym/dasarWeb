@@ -20,6 +20,7 @@ h2{
 }
 
 body{
-    background: lightcyan;
+    background: url('../dasarWeb/img/tree1.png'), url('../dasarWeb/img/field.jpg');
+    background-repeat: no-repeat, repeat;
     color: white;
 }
