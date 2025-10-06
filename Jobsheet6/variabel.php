@@ -1,6 +1,20 @@
-<?php
-$nama = @$_GET['nama'];
-$usia = @$_GET['usia'];
+<html>
+<body>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        Name: <input type="text" name="fname">
+        <input type="submit">
+    </form>
 
-echo "Halo {$nama}! Apakah benar anda berusia {$usia} tahun?";
-?>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // collect value of input field
+        $name = $_POST['fname'];
+        if (empty($name)) {
+            echo "Name is empty";
+        } else {
+            echo $name;
+        }
+    }
+    ?>
+</body>
+</html>
