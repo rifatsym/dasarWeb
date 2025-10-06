@@ -1,20 +1,49 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        $dosen = [
-            'Nama' => 'Elok',
-            'domisili' => 'Malang',
-            'jenis_kelamin' => 'Perempuan'
-        ];
+<head>
+    <title>Data Dosen Simpel</title>
+    <style>
+        /* CSS yang disederhanakan */
+        table {
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
 
-        echo "Nama: {$dosen ['nama']} <br>";
-        echo "Domisili: {$dosen ['domisili']} <br>";
-        echo "Jenis Kelamin: {$dosen ['jenis_kelamin']} <br>";
-        ?>
-    </body>
+<h2>Data Dosen</h2>
+
+<?php
+// Data array
+$Dosen = [
+    'nama'          => 'Elok Nur Hamdana',
+    'domisili'      => 'Malang',
+    'jenis_kelamin' => 'Perempuan'
+];
+?>
+
+<table>
+    <tr>
+        <th>Nama</th>
+        <td><?php echo $Dosen['nama']; ?></td>
+    </tr>
+    <tr>
+        <th>Domisili</th>
+        <td><?php echo $Dosen['domisili']; ?></td>
+    </tr>
+    <tr>
+        <th>Jenis Kelamin</th>
+        <td><?php echo $Dosen['jenis_kelamin']; ?></td>
+    </tr>
+</table>
+
+</body>
 </html>
